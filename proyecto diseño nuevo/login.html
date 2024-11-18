@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form" id="login-form">
+            <h1>Inicie sesión en su cuenta</h1>
+            <label for="username">Usuario</label>
+            <input type="text" id="username" placeholder="" required>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="" required>
+            <a href="olvidaste tu contraseña.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            <a href="register.html" class="register-link">Regístrate</a> 
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('login-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
+
+                const userData = JSON.parse(localStorage.getItem('userData'));
+
+                console.log(`Intentando iniciar sesión con: ${username} - ${password}`);
+
+                if (userData) {
+                    if (userData.username === username && userData.password === password) {
+                        alert('Inicio de sesión exitoso');
+                        window.location.href = 'noticias.html';
+                    } else {
+                        alert('Credenciales incorrectas');
+                    }
+                } else {
+                    alert('No hay usuarios registrados.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

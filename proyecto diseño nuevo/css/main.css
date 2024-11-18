@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+    overflow-y: auto; /* Permite el scroll en el body */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(45deg, #e9a427, #8600dd, #e9a427, #8600dd);
+    background-size: 400% 400%;
+    animation: rotateColors 15s ease infinite;
+}
+
+@keyframes rotateColors {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura del viewport */
+    padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+.login-form, .reset-form, .register-form {
+    padding: 60px; /* Aumenta el padding */
+    width: 90%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 400px; /* Aumenta el ancho máximo del formulario */
+    margin: 20px auto; /* Margen superior e inferior para evitar que el formulario esté pegado al borde */
+}
+
+h1 {
+    margin-bottom: 30px; /* Aumenta el margen inferior */
+    font-size: 36px;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+}
+
+input:focus {
+    border-bottom: 2px solid #FFA500;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #8600dd;
+    color: white;
+    border: 2px solid #8600dd;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: #6a00a3;
+    border-color: #6a00a3;
+}
+
+.forgot-password,
+.register-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.forgot-password:hover,
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.back-to-login {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+}
+
+input:focus, select:focus {
+    border-bottom: 2px solid #FFA500;
+    outline: none;
+}
+
+select {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+}

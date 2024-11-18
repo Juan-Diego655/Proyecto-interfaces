@@ -1,0 +1,428 @@
+<html>
+ <head>
+  <title>
+   UNAB Social Media
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f5f5f5;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+            color: #fda500;
+        }
+        .sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        .sidebar .search {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .sidebar .search input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 16px;
+            flex: 1;
+        }
+        .sidebar .search i {
+            color: #fda500;
+        }
+        .content {
+            flex: 1;
+            padding: 20px; /* Tamaño del las noticas */
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+        .header {
+            background-color: #fda500;
+            color: white;
+            padding: 50px;
+            border-radius: 40px;
+            width: 790px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header img {
+            border-radius: 30px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            margin-left: 0; 
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .posts {
+            margin-top: 20px;
+        }
+        .post {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .post .user {
+            display: flex;
+            align-items: center;
+        }
+        .post .user img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post .user .username {
+            font-weight: bold;
+        }
+        .post .user .handle {
+            color: #888;
+        }
+        .post .content {
+            margin-top: 10px;
+        }
+        .post .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .post .actions i {
+            color: #888;
+        }
+        .sidebar .more {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar .more i {
+            margin-right: 10px;
+            color: #fda500;
+        }
+        .sidebar .more:hover {
+            background-color: #f0f0f0;
+        }
+        .profile {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile .username {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .profile .id {
+            color: #888;
+        }
+        .contacts {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contacts .contact {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .contacts .contact img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .contacts .contact .name {
+            font-size: 20px;
+            margin-bottom: 17px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .sidebar a {
+                font-size: 16px;
+            }
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 150px;
+            }
+            .sidebar a {
+                font-size: 14px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+        .link img.link-icon {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 40px; 
+            height: 35px; 
+        }   
+        .link img.link-icon1 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px; 
+        }
+        .link img.link-icon2 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        }  
+        .link img.link-icon3 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        } 
+        .link img.link-icon4 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        }  
+        .link img.link-icon5 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <img alt="Universidad UNAB logo" height="50" src="images/v78_8.png" width="150"/>
+   <div class="search">
+    <i class="fas fa-search">
+    </i>
+    <input placeholder="Buscar" type="text"/>
+   </div>
+   <a href="#">
+    <i class="link" href="#"><img src="images/hogar.png" alt="Inicio Icono" class="link-icon1">
+    </i>
+    Inicio
+   </a>
+   <a href="chat.html">
+    <i class="link" href="chat.html"><img src="images/comentarios.png" alt="Mensajes Icono" class="link-icon2">
+    </i>
+    Mensajes
+   </a>
+   <a href="chat ia.html">
+    <i class="link" href="chat ia.html"><img src="images/v173_760.png" alt="Banu IA Icono" class="link-icon">
+    </i>
+    Banu IA
+   </a>
+   <a href="Mapa.html">
+    <i class="link" href="Mapa.html"><img src="images/marcador-de-mapa.png" alt="Mapa Icono" class="link-icon3">
+    </i>
+    Mapa
+   </a>
+   <a href="perfil.html">
+    <i class="link" href="perfil.html"><img src="images/modo-retrato.png" alt="Perfil Icono" class="link-icon4">
+    </i>
+    Perfil
+   </a>
+   <a class="more" href="configuración.html ">
+    <i class="link" href="configuración.html"><img src="images/menu-hamburguesa.png" alt="Mas Icono" class="link-icon5">
+    </i>
+    Más
+   </a>
+  </div>
+  <div class="content">
+   <div class="header">
+    <img alt="Header image" src="images/UNAB.png"  />
+   </div>
+   <div class="posts">
+    <div class="post">
+     <div class="user">
+      <img alt="User profile picture" height="50" src="images/v81_66.png" width="50"/>
+      <div>
+       <div class="username">
+        unab_online
+       </div>
+       <div class="handle">
+        @u_unab
+       </div>
+      </div>
+     </div>
+     <div class="content">
+        <a href="https://unab.edu.co/representantes-de-la-comunidad-estudiantil-y-profesional-tomaron-posesion-de-sus-cargos/">Representantes de la comunidad estudiantil y profesional tomaron posesión de sus cargos </a>
+     </div>
+     <img alt="Post image" height="500" src="images/Posesion-CSE.jpg" width="500"/>
+     <div class="actions">
+      <i class="fas fa-heart">
+      </i>
+      <i class="fas fa-comment">
+      </i>
+      <i class="fas fa-share">
+      </i>
+     </div>
+    </div>
+    <div class="post">
+     <div class="user">
+      <img alt="User profile picture" height="50" src="images/v81_66.png" width="50"/>
+      <div>
+       <div class="username">
+        unab_online
+       </div>
+       <div class="handle">
+        @u_unab
+       </div>
+      </div>
+     </div>
+     <div class="content" style="text-align: left;">
+        <a href="https://unab.edu.co/unab-presenta-el-libro-de-rafael-ardila-duarte/">¡Ya está listo el libro biográfico sobre el empresario Rafael Ardila Duarte! UNAB hará presentación en el Teatro Santander </a>     
+    </div>
+     <img alt="Post image" height="500" src="images/Rafael-Ardila-Duarte-2.jpg" width="500"/>
+     <div class="actions">
+      <i class="fas fa-heart">
+      </i>
+      <i class="fas fa-comment">
+      </i>
+      <i class="fas fa-share">
+      </i>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="sidebar">
+   <div class="profile">
+    <img alt="User profile picture" height="100" src="images/Fondo_User.png" width="100"/>
+    <div class="username" id="user-name">
+     User_name
+    </div>
+    <div class="id" id="user-id">
+     ID: #########
+    </div>
+   </div>
+   <div class="contacts">
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 1
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 2
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 3
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 4
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 5
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 6
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 7
+     </div>
+    </div>
+    <div class="contact">
+     <img alt="Contact profile picture" height="40" src="images/Fondo_User.png" width="40"/>
+     <div class="name">
+      Contact 8
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+ const userData = JSON.parse(localStorage.getItem('userData'));
+ if (userData) {
+   const { name, ID } = userData;
+   document.getElementById('user-name').textContent = name || 'User _name';
+   document.getElementById('user-id').textContent = `ID: ${ID || '########'}`;
+ }
+});
+    </script>
+ </body>
+</html>

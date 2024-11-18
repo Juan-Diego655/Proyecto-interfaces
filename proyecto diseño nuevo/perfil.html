@@ -1,0 +1,265 @@
+<html>
+ <head>
+  <title>
+   Universidad UNAB
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #fda500, #8000ff);
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+            color: #fda500;
+        }
+        .sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        .sidebar .search {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .sidebar .search input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 16px;
+            flex: 1;
+        }
+        .sidebar .search i {
+            color: #fda500;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-card {
+            background-color: #fff;
+            border-radius: 100px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-card .avatar {
+            width: 200px;
+            height: 200px;
+            background-color: #8000ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+        .profile-card .avatar i {
+            color: #fff;
+            font-size: 50px;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .profile-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .profile-card .links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .profile-card .links a {
+            margin: 0 10px;
+        }
+        .profile-card .links img {
+            width: 100px;
+            border-radius: 10px;
+        }
+        .profile-card .info {
+            align-items: center;
+            margin-top: 20px;
+        }
+        .profile-card .info .hours {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            height: 100px;
+            width: 210px;
+            margin-left: 135px;
+        }
+        .profile-card .info .hours p {
+            text-align: center;
+            place-items: center;
+        }
+        .profile-card .info .qr {
+            text-align: right;
+            position: absolute;
+            top: 410px;
+            left: 430px;
+        }
+        .profile-card .info .qr img {
+            width: 80px;
+        }
+        .profile-card .info .qr p {
+            margin: 7px;    
+        }
+        .sidebar .bottom-link {
+            margin-top: auto;
+        }
+        .link img.link-icon {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 40px; 
+            height: 35px; 
+        }   
+        .link img.link-icon1 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px; 
+        }
+        .link img.link-icon2 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        }  
+        .link img.link-icon3 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        } 
+        .link img.link-icon4 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        }  
+        .link img.link-icon5 {
+            align-self: center;
+            margin-top: 10px;
+            margin-right: 5px; 
+            width: 30px; 
+            height: 30px;  
+        }
+        
+  </style>
+ </head>
+ <body>
+    <div class="sidebar">
+        <img alt="Universidad UNAB logo" height="50" src="images/v78_8.png" width="150"/>
+        <div class="search">
+         <i class="fas fa-search">
+         </i>
+         <input placeholder="Buscar" type="text"/>
+        </div>
+        <a href="Noticias.html">
+         <i class="link" href="#"><img src="images/hogar.png" alt="Inicio Icono" class="link-icon1">
+         </i>
+         Inicio
+        </a>
+        <a href="chat.html">
+         <i class="link" href="#"><img src="images/comentarios.png" alt="Mensajes Icono" class="link-icon2">
+         </i>
+         Mensajes
+        </a>
+        <a href="chat ia.html">
+         <i class="link" href="#"><img src="images/v173_760.png" alt="Banu IA Icono" class="link-icon">
+         </i>
+         Banu IA
+        </a>
+        <a href="Mapa.html">
+         <i class="link" href="#"><img src="images/marcador-de-mapa.png" alt="Mapa Icono" class="link-icon3">
+         </i>
+         Mapa
+        </a>
+        <a href="perfil.html">
+         <i class="link" href="#"><img src="images/modo-retrato.png" alt="Perfil Icono" class="link-icon4">
+         </i>
+         Perfil
+        </a>
+        <a class="more" href="configuración.html">
+         <i class="link" href="#"><img src="images/menu-hamburguesa.png" alt="Mas Icono" class="link-icon5">
+         </i>
+         Más
+        </a>
+       </div>
+  </div>
+    <div class="main-content">
+        <div class="profile-card">
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <h2 id="user-name">User_name</h2>
+            <p id="user-id">ID:########</p>
+            <div class="links">
+                <a href="#">
+                    <img alt="Cosmos" height="50" src="images/Cosmos.png" width="100" class="link-web1"/>
+                </a>
+                <a href="#">
+                    <img alt="MiPortal" height="50" src="images/Port U 1.png" width="100"/>
+                </a>
+                <a href="#">
+                    <img alt="Tema plus" height="50" src="images/Tema.png" width="100" />
+                </a>
+            </div>
+            <div class="info">
+                <div class="hours">
+                    <p>Horas libres: 80/96</p>
+                    <p>Calculadora de notas:</p>
+                    <a href="calculador.html">
+                        <img alt="Calculadora" height="50" src="images/calculadora.png"  />
+                    </a>
+                </div>
+                <div class="qr">
+                    <img alt="QR Code" height="80" src="imageS/QR.png" width="80"/>
+                    <p>Carnet U</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() { const userData = JSON.parse(localStorage.getItem('userData')); if (userData) { const { name, ID } = userData; document.getElementById('user-name').textContent = name || 'User_name'; document.getElementById('user-id').textContent = `ID: ${ID || '########'}`; } });         
+    </script>
+</body>
+</html>

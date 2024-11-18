@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh; /* Asegura que el body ocupe el 100% de la altura de la ventana */
+    overflow: hidden; /* Evita el desplazamiento */
+    background-color: white; /* Fondo blanco */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Asegura que el contenedor ocupe el 100% de la altura de la ventana */
+}
+
+.register-form {
+    padding: 40px;
+    width: 90%; /* Cambia el ancho a un porcentaje para que se ajuste en pantallas pequeñas */
+    max-width: 350px; /* Establece un ancho máximo para pantallas grandes */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco de transparencia */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 36px;
+    color: #FFA500; /* Color naranja para el título */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333; /* Color gris oscuro para las etiquetas */
+    text-align: left;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #FFA500; /* Borde inferior naranja */
+    background: transparent;
+    color: #333; /* Color gris oscuro para el texto */
+    font-size: 16px;
+    height: 50px;
+}
+
+input:focus {
+    border-bottom: 2px solid #FF4500; /* Color naranja más oscuro al enfocar */
+    outline: none;
+}
+
+button {
+    width: 100%; /* Botón ocupa el ancho completo */
+    padding: 15px;
+    background-color: #FFA500; /* Color naranja del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+button:hover {
+    background-color: #FF4500; /* Color naranja más oscuro al pasar el mouse */
+}
+
+.back-to-login {
+    display: block; /* Asegura que el enlace esté en su propia línea */
+    margin-top: 20px; /* Espacio superior para separar del formulario */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #FFA500; /* Color naranja para el enlace */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.back-to-login:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
